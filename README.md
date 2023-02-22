@@ -7,6 +7,11 @@ This repository contains [PostScript][wikipedia:postscript] sources for the imag
 
 ![Enneagram](https://fifth-postulate.nl/enneagram/image/enneagram.png)
 
+## Ideas
+The following creative ideas I would like to realize
+
+* Enneagram as a [Euler Cycle][wikipedia:euler-path]
+
 [wikipedia:enneagram]: https://en.wikipedia.org/wiki/Enneagram_of_Personality
 [wikipedia:postscript]: https://www.adobe.com/products/postscript.html
-
+[wikipedia:euler-path]: https://en.wikipedia.org/wiki/Eulerian_path
