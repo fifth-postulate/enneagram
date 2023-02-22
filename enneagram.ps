@@ -1,0 +1,46 @@
+/pagewidth 210 def
+/pageheight 297 def
+
+/toLocation {% x y R index
+    [/index /r /y /x] dup length 2 add dict begin {exch def} forall
+        /angle 360 9 div index neg mul 90 add def
+        x r angle cos mul add y r angle sin mul add
+    end
+} def
+
+/enneagram {% x y R
+    [/R /y /x] dup length 2 add dict begin {exch def} forall
+        x y R 0 360 arc
+        [
+            [3 6 9]
+            [1 4 2 8 5 7]
+        ] {
+            /points exch def
+            x y R
+            points 0 get
+            toLocation
+            moveto
+            points {
+                /index exch def
+                x y R index toLocation
+                lineto
+            } forall
+            closepath
+        } forall
+    end
+} def
+
+72 25.4 div dup scale
+
+save /cleanslate exch def
+
+1 setlinejoin
+pagewidth 2 div pageheight 2 div translate
+
+0 0 pagewidth 2 div enneagram 
+
+stroke
+
+showpage
+
+cleanslate restore
